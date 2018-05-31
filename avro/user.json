@@ -1,0 +1,34 @@
+[
+    {
+        "name": "SFZ",
+        "favorite_number": 200,
+        "favorite_color": "red"
+    },
+    {
+        "name": "SFZ1",
+        "favorite_number": 100,
+        "favorite_color": "blue"
+    },
+    {
+        "name": "SFZ2",
+        "favorite_number": 220,
+        "favorite_color": "green"
+    },
+    {
+        "name": "SFZ3",
+        "favorite_number": 210,
+        "favorite_color": "black"
+    }
+]
+
+{
+    "created_at": "${now()}",
+    "name": "SFZ"+${random():mod(5).toNumber():plus(1)},
+    "favorite_number": ${random():mod(1000):toNumber()}
+}
+
+{
+    "created_at": "${now()}",
+    "name": "SFZ_${random():mod(5).toNumber():plus(1)}",
+    "favorite_number": "${random():mod(1000).toNumber()}"
+}
