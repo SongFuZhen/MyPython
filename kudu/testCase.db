@@ -1,0 +1,47 @@
+--- 1530374400  -> 2017-07-01 00:00:00
+--- 1530460800  -> 2017-07-02 00:00:00
+--- 1530547200  -> 2017-07-03 00:00:00
+--- 1530633600  -> 2017-07-04 00:00:00
+--- 1530720000  -> 2017-07-05 00:00:00
+--- 1530806400  -> 2017-07-06 00:00:00
+--- 1530892800  -> 2017-07-07 00:00:00
+--- 1530979200  -> 2017-07-08 00:00:00
+--- 1531065600  -> 2017-07-09 00:00:00
+--- 1531152000  -> 2017-07-10 00:00:00
+--- 1531238399  -> 2017-07-10 23:59:59
+
+-- case 1: one machine one day
+    -- case 1-0: machine000 2017-07-01 all day    
+    SELECT * FROM metrics WHERE host = 'machine000' AND 1530374400 <= time < 1530460800;
+
+    -- case 1-1: machine001 2017-07-01 all day
+    SELECT * FROM metrics WHERE host = 'machine001' AND 1530374400 <= time < 1530460800;
+
+    -- case 1-2: machine002 2017-07-01 all day
+    SELECT * FROM metrics WHERE host = 'machine002' AND 1530374400 <= time < 1530460800;
+
+    -- case 1-3: machine003 2017-07-01 all day
+    SELECT * FROM metrics WHERE host = 'machine003' AND 1530374400 <= time < 1530460800;
+
+    -- case 1-4: machine004 2017-07-01 all day
+    SELECT * FROM metrics WHERE host = 'machine004' AND 1530374400 <= time < 1530460800;
+
+    -- case 1-5: machine005 2017-07-01 all day
+    SELECT * FROM metrics WHERE host = 'machine005' AND 1530374400 <= time < 1530460800;
+
+-- case 2: one day
+    -- case 2-0: 2017-07-01 all day
+    SELECT * FROM metrics WHERE 1530374400 <= TIME < 1530460800
+    
+    -- case 2-1: 2017-07-02 all day
+    SELECT * FROM metrics WHERE 1530460800 <= TIME < 1530547200
+
+-- case 3: one machine 
+    -- case 3-0: machine000 all time
+    SELECT * FROM metrics WHERE host = 'machine000'
+
+    -- case 3-1: machine001 all time
+    SELECT * FROM metrics WHERE host = 'machine001'
+
+    -- case 3-2: machine002 all time
+    SELECT * FROM metrics WHERE host = 'machine002'
