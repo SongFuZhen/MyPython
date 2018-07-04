@@ -5,7 +5,6 @@ import datetime
 import time
 import random
 import csv
-import os;
 import sys
 
 # define const
